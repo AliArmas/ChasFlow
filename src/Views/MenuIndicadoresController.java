@@ -21,11 +21,7 @@ import javafx.scene.layout.Region;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author Axel Hernandez <191246>
- */
+
 public class MenuIndicadoresController implements Initializable {
     @FXML
     private Button registerButton;

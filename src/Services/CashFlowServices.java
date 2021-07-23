@@ -13,9 +13,9 @@ import javafx.collections.ObservableList;
 
 public class CashFlowServices {
 
-    private String url = "jdbc:postgresql://localhost:5432/cashflow";
-    private String user = "postgres";
-    private String pass = "7132";
+    private String url = "jdbc:mysql://localhost:3306/cashFlow?zeroDateTimeBehavior=convertToNull&serverTimezone=UTC";
+    private String user = "root";
+    private String pass = "LgFcdrcdr9685.";
     private Connection conn;
 
     public static String Clasificacion1 = "Entrada";

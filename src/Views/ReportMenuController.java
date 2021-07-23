@@ -29,11 +29,7 @@ import javafx.stage.Popup;
 import javafx.stage.Stage;
 import javax.management.timer.Timer;
 
-/**
- * FXML Controller class
- *
- * @author Sammy Guergachi <sguergachi at gmail.com>
- */
+
 public class ReportMenuController implements Initializable {
 
     @FXML

@@ -7,9 +7,9 @@ public class Conexionbd {
     
     //Connection Example
     
-    private final String url = "jdbc:postgresql://localhost:5432/cashflow";
-    private final String user = "postgres";
-    private final String pass = "7132";
+    private final String url = "jdbc:mysql://localhost:3306/cashFlow?zeroDateTimeBehavior=convertToNull&serverTimezone=UTC";
+    private final String user = "root";
+    private final String pass = "LgFcdrcdr9685.";
     
     private Connection conn;
     
@@ -21,7 +21,7 @@ public class Conexionbd {
                 System.out.println("Driver error");
             }
             Connection conn = null;
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/cashflow", "postgres", "7132");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cashFlow?zeroDateTimeBehavior=convertToNull&serverTimezone=UTC", "root", "LgFcdrcdr9685.");
             boolean valid = conn.isValid(50000);
             System.out.println(valid ? "TEST OK" : "TEST FAIL");   
         } catch (java.sql.SQLException sqle) {

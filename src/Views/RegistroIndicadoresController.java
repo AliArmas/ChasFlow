@@ -31,11 +31,7 @@ import java.time.Month;
 import java.time.format.TextStyle;
 import java.util.Locale;
 
-/**
- * FXML Controller class
- *
- * @author Sammy Guergachi <sguergachi at gmail.com>
- */
+
 public class RegistroIndicadoresController implements Initializable {
 
     @FXML
