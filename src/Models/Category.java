@@ -2,7 +2,7 @@ package Models;
 
 public class Category{
 
-    private int iD;
+    private int iD =0;
     private String clasificacion;
     private String categoria;
     private String sub_categoria;

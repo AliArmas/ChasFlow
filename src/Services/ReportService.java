@@ -385,7 +385,9 @@ public class ReportService {
         try {
 
             //Semana 1 y Razon
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/cashflow", "postgres", "7132");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cashflow?zeroDateTimeBehavior=convertToNull&serverTimezone=UTC", 
+            		"programacion.react", 
+            		")pfKHHw3Tn*?$S$T");
             PreparedStatement req = conn.prepareStatement(query);
             ResultSet res = req.executeQuery();
             while (res.next()) {

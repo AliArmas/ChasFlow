@@ -96,11 +96,11 @@ public class CategoriesMenuContoller implements Initializable {
         String subcat = this.subcategoriaInput.getText();
         boolean isValid = validateFields(categoria, subcat);
         if (isValid) {
-            Category newCat = this.svc.validateCategory(categoria, subcat);
+            Category newCat = new Category();
             if (newCat.getiD() == 0) {
                 newCat.setClasificacion(clasif);
                 newCat.setCategoria(categoria);
-                newCat.setClasificacion(clasif);
+                newCat.setSub_categoria(subcat);
                 this.svc.createCategory(newCat);
                 fillTable();
                 clearFields();
@@ -162,7 +162,6 @@ public class CategoriesMenuContoller implements Initializable {
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             stage.setScene(scene);
-            stage.setFullScreen(true);
             stage.setMaximized(true);
             stage.setTitle("CashFlow App");
             stage.show();

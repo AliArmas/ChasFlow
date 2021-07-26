@@ -6,7 +6,6 @@
 package Views;
 
 import Services.ReportService;
-import com.sun.glass.ui.Window;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
@@ -102,7 +101,6 @@ public class ReportMenuController implements Initializable {
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             stage.setScene(scene);
-            stage.setFullScreen(true);
             stage.setMaximized(true);
             stage.setTitle("CashFlow App");
             stage.show();

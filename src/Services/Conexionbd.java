@@ -7,9 +7,9 @@ public class Conexionbd {
     
     //Connection Example
     
-    private final String url = "jdbc:mysql://localhost:3306/cashFlow?zeroDateTimeBehavior=convertToNull&serverTimezone=UTC";
-    private final String user = "root";
-    private final String pass = "LgFcdrcdr9685.";
+    private String url = "jdbc:mysql://localhost:3306/cashflow?zeroDateTimeBehavior=convertToNull&serverTimezone=UTC";
+    private String user = "programacion.react";
+    private final String pass = ")pfKHHw3Tn*?$S$T";
     
     private Connection conn;
     

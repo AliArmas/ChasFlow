@@ -13,9 +13,9 @@ import javafx.collections.ObservableList;
 
 public class CashFlowServices {
 
-    private String url = "jdbc:mysql://localhost:3306/cashFlow?zeroDateTimeBehavior=convertToNull&serverTimezone=UTC";
-    private String user = "root";
-    private String pass = "LgFcdrcdr9685.";
+    private String url = "jdbc:mysql://localhost:3306/cashflow?zeroDateTimeBehavior=convertToNull&serverTimezone=UTC";
+    private String user = "programacion.react";
+    private String pass = ")pfKHHw3Tn*?$S$T";
     private Connection conn;
 
     public static String Clasificacion1 = "Entrada";
