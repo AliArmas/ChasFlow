@@ -46,6 +46,9 @@ public class MainMenuContoller implements Initializable {
 
     @FXML
     private Text CurrentUserRole;
+    
+    @FXML
+    private Button Salir;
 
     User currentuser = new User();
 
@@ -143,6 +146,11 @@ public class MainMenuContoller implements Initializable {
         } catch (Exception e) {
             System.out.println(e);
         }
+    }
+    
+    @FXML
+    void OnMouseClickedSalir(MouseEvent event) {
+    	System.exit(1);
     }
     
 }

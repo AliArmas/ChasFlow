@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="712.0" prefWidth="1358.0" style="-fx-background-color: #002333;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.MenuIndicadoresController">
+<AnchorPane id="AnchorPane" prefHeight="712.0" prefWidth="1358.0" style="-fx-background-color: #008fcd;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.MenuIndicadoresController">
    <children>
       <Text fill="WHITE" layoutX="80.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indicadores" wrappingWidth="248.828125">
          <font>
@@ -19,12 +19,12 @@
       </Text>
       <Line endX="1010.0" fill="WHITE" layoutX="283.0" layoutY="149.0" startX="-203.0" stroke="WHITE" />
       <Line endX="1010.0" fill="WHITE" layoutX="283.0" layoutY="692.0" startX="-203.0" stroke="WHITE" />
-      <Button fx:id="registerButton" alignment="BOTTOM_CENTER" layoutX="138.0" layoutY="284.0" mnemonicParsing="false" onAction="#onRegister" prefHeight="250.0" prefWidth="500.0" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: #00FF84;" text="Registro de Informacion" textFill="#002333">
+      <Button fx:id="registerButton" alignment="BOTTOM_CENTER" layoutX="138.0" layoutY="284.0" mnemonicParsing="false" onAction="#onRegister" prefHeight="250.0" prefWidth="500.0" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: #65FB09;" text="Registro de Informacion" textFill="#002333">
          <font>
             <Font name="Segoe UI Bold" size="24.0" />
          </font>
       </Button>
-      <Button fx:id="reportButton" alignment="BOTTOM_CENTER" layoutX="742.0" layoutY="284.0" mnemonicParsing="false" onAction="#onReport" prefHeight="250.0" prefWidth="500.0" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: #00FF84;" text="Reportes" textFill="#002333">
+      <Button fx:id="reportButton" alignment="BOTTOM_CENTER" layoutX="742.0" layoutY="284.0" mnemonicParsing="false" onAction="#onReport" prefHeight="250.0" prefWidth="500.0" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: #65FB09;" text="Reportes" textFill="#002333">
          <font>
             <Font name="Segoe UI Bold" size="24.0" />
          </font>
@@ -64,5 +64,10 @@
             <Image url="@../Assets/251451-200.png" />
          </image>
       </ImageView>
+      <Button fx:id="Salir" layoutX="1192.0" layoutY="634.0" mnemonicParsing="false" onMouseClicked="#OnMouseClickedSalir" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #F70909; -fx-background-radius: 20;" text="Salir" textFill="#002333">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -64,12 +64,21 @@ public class CategoriesMenuContoller implements Initializable {
     private CashFlowServices svc = new CashFlowServices();
 
     private final Message alert = new Message();
+    
     @FXML
     private ImageView onBack;
+    
     @FXML
     private Region onBacking;
+    
     @FXML
     private Button editButton;
+    
+    @FXML
+    private Button Salir;
+
+    
+    
 
     /**
      * Initializes the controller class.
@@ -198,6 +207,10 @@ public class CategoriesMenuContoller implements Initializable {
         item.setSub_categoria(subcatStringCellEditEvent.getNewValue());
         this.svc.patchSubCat(item);
         fillTable();
+    }
+    @FXML
+    void OnMouseClickedSalir(MouseEvent event) {
+    	System.exit(1);
     }
 
 }

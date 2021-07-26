@@ -36,36 +36,54 @@ public class RegistroIndicadoresController implements Initializable {
 
     @FXML
     private ComboBox<Integer> cobroCombo;
+    
     @FXML
     private TextField cobroRazonInput;
+    
     @FXML
     private TextField montoCobroInput;
+    
     @FXML
     private Button addCobro;
+    
     @FXML
     private Text CurrentUserName;
+    
     @FXML
     private Text CurrentUserRole;
+    
     @FXML
     private Region onBacking;
+    
     @FXML
     private ImageView onBack;
+    
     @FXML
     private ComboBox<Integer> pagoCombo;
+    
     @FXML
     private TextField pagoRazonInput;
+    
     @FXML
     private TextField montoPagoInput;
+    
     @FXML
     private Button addPago;
+    
     @FXML
     private ComboBox<Integer> bancosCombo;
+    
     @FXML
     private TextField pagoBancoInput;
+    
     @FXML
     private TextField montoBancoInput;
+    
     @FXML
     private Button addBanco;
+    
+    @FXML
+    private Button Salir;
 
     CashFlowServices svc = new CashFlowServices();
     LocalDate month;
@@ -199,5 +217,10 @@ public class RegistroIndicadoresController implements Initializable {
         } catch (Exception e) {
             System.out.println(e);
         }
+    }
+    
+    @FXML
+    void OnMouseClickedSalir(MouseEvent event) {
+    	System.exit(1);
     }
 }

@@ -33,16 +33,24 @@ public class ReportMenuController implements Initializable {
 
     @FXML
     private Text CurrentUserName;
+    
     @FXML
     private Text CurrentUserRole;
+    
     @FXML
     private Region onBacking;
+    
     @FXML
     private ImageView onBack;
+    
     @FXML
     private ComboBox<String> comboMes;
+    
     @FXML
     private Button onGenerateReport;
+    
+    @FXML
+    private Button Salir;
 
     ReportService rs = new ReportService();
 
@@ -110,5 +118,10 @@ public class ReportMenuController implements Initializable {
         } catch (Exception e) {
             System.out.println(e);
         }
+    }
+    
+    @FXML
+    void OnMouseClickedSalir(MouseEvent event) {
+    	System.exit(1);
     }
 }

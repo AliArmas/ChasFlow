@@ -31,14 +31,21 @@ import javafx.stage.Stage;
 public class LoginController implements Initializable {
 
     private Label label;
+    
     @FXML
     private TextField emailInput;
+    
     @FXML
     private PasswordField passwordInput;
+    
     @FXML
     private Button loginButton;
+    
     @FXML
     private Button registerButton;
+    
+    @FXML
+    private Button Salir;
 
     Message message = new Message();
 
@@ -147,6 +154,11 @@ public class LoginController implements Initializable {
 
     public void setCurrentuser(User currentuser) {
         this.currentuser = currentuser;
+    }
+    
+    @FXML
+    void OnMouseClickedSalir(MouseEvent event) {
+    	System.exit(1);
     }
 
 }

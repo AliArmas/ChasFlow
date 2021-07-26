@@ -25,20 +25,30 @@ import javafx.stage.Stage;
 public class MenuIndicadoresController implements Initializable {
     @FXML
     private Button registerButton;
+    
     @FXML
     private Button reportButton;
+    
     @FXML
     private ImageView registerIMG;
+    
     @FXML
     private ImageView ReportIMG;
+    
     @FXML
     private Text CurrentUserName;
+    
     @FXML
     private Text CurrentUserRole;
+    
     @FXML
     private Region onBacking;
+    
     @FXML
     private ImageView onBack;
+    
+    @FXML
+    private Button Salir;
 
     /**
      * Initializes the controller class.
@@ -154,5 +164,10 @@ public class MenuIndicadoresController implements Initializable {
         } catch (Exception e) {
             System.out.println(e);
         }
+    }
+    
+    @FXML
+    void OnMouseClickedSalir(MouseEvent event) {
+    	System.exit(1);
     }
 }

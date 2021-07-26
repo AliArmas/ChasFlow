@@ -27,6 +27,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class RegisterController implements Initializable {
@@ -54,6 +55,9 @@ public class RegisterController implements Initializable {
 
     @FXML
     private ComboBox<String> comboRol;
+    
+    @FXML
+    private Button Salir;
 
     UsersService svc = new UsersService();
 
@@ -170,6 +174,11 @@ public class RegisterController implements Initializable {
         this.bdInput.setValue(LocalDate.now());
         emailInput.clear();
         passwordInput.clear();
+    }
+    
+    @FXML
+    void OnMouseClickedSalir(MouseEvent event) {
+    	System.exit(1);
     }
 
 }

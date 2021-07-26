@@ -21,6 +21,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -35,32 +36,52 @@ public class CashFlowMenuController implements Initializable {
 
     @FXML
     private ComboBox<String> categoriesCombo;
+    
     @FXML
     private TableView<CashFlow> MovementsTable;
+    
     @FXML
     private TableColumn<CashFlow, String> dateCol;
+    
     @FXML
     private TableColumn<CashFlow, String> descCol;
+    
     @FXML
     private TableColumn<CashFlow, String> catCol;
+    
     @FXML
     private TextField descriptionInput;
+    
     @FXML
     private Button saveButton;
+    
     @FXML
     private Text CurrentUserName;
+    
     @FXML
     private Text CurrentUserRole;
+    
     @FXML
     private Region onBacking;
+    
     @FXML
     private ImageView onBack;
+    
     @FXML
     private CheckBox checkEntrada;
+    
     @FXML
     private CheckBox checkSalida;
+    
     @FXML
     private TextField payInput;
+    
+    @FXML
+    private DatePicker bdInput;
+    
+    @FXML
+    private Button Salir;
+
 
     private ObservableList<CashFlow> flujos;
     
@@ -80,8 +101,7 @@ public class CashFlowMenuController implements Initializable {
     private void onSave(ActionEvent event) {
 
         String monto = this.payInput.getText();
-        LocalDate date = LocalDate.now();
-        String fecha = date.toString();
+        String fecha = bdInput.getValue().toString();
         String descripcion = this.descriptionInput.getText();
         String category = this.categoriesCombo.getValue();
         boolean isValid = validateForm(monto, descripcion, category);
@@ -94,6 +114,7 @@ public class CashFlowMenuController implements Initializable {
             this.alert.ivalidFieldsAlert();
             clearFields();
         }
+        bdInput.setValue(null);
     }
 
     @FXML
@@ -164,5 +185,9 @@ public class CashFlowMenuController implements Initializable {
         } catch (Exception e) {
             System.out.println(e);
         }
+    }
+    @FXML
+    void OnMouseClickedSalir(MouseEvent event) {
+    	System.exit(1);
     }
 }
