@@ -95,8 +95,8 @@ public class RegistroIndicadoresController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        this.CurrentUserName.setText(MainApp.getCurrentUser().getNombres());
-        this.CurrentUserRole.setText(MainApp.getCurrentUser().getRol());
+    	this.CurrentUserName.setText(MainApp.getCurrentUser().getNombres()+ " "+ MainApp.getCurrentUser().getApellidos());
+    	this.CurrentUserRole.setText(MainApp.getCurrentUser().getRol());
         initCombox();
     }
 

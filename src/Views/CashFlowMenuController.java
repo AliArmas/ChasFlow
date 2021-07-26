@@ -92,7 +92,7 @@ public class CashFlowMenuController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        this.CurrentUserName.setText(MainApp.getCurrentUser().getNombres());
+    	this.CurrentUserName.setText(MainApp.getCurrentUser().getNombres()+ " "+ MainApp.getCurrentUser().getApellidos());
         this.CurrentUserRole.setText(MainApp.getCurrentUser().getRol()); 
         fillTable();
     }
@@ -114,7 +114,6 @@ public class CashFlowMenuController implements Initializable {
             this.alert.ivalidFieldsAlert();
             clearFields();
         }
-        bdInput.setValue(null);
     }
 
     @FXML

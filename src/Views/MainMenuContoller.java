@@ -57,7 +57,7 @@ public class MainMenuContoller implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        this.CurrentUserName.setText(MainApp.getCurrentUser().getNombres());
+        this.CurrentUserName.setText(MainApp.getCurrentUser().getNombres()+ " "+ MainApp.getCurrentUser().getApellidos());
         this.CurrentUserRole.setText(MainApp.getCurrentUser().getRol());
     }
 

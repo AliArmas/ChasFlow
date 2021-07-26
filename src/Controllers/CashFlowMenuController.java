@@ -156,7 +156,6 @@ public class CashFlowMenuController implements Initializable {
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             stage.setScene(scene);
-            stage.setFullScreen(true);
             stage.setMaximized(true);
             stage.setTitle("CashFlow App");
             stage.show();

@@ -91,7 +91,7 @@ public class CategoriesMenuContoller implements Initializable {
         this.categoriaCol.setCellFactory(TextFieldTableCell.forTableColumn());
         this.subcategoriaCol.setCellFactory(TextFieldTableCell.forTableColumn());
 
-        this.CurrentUserName.setText(MainApp.getCurrentUser().getNombres());
+        this.CurrentUserName.setText(MainApp.getCurrentUser().getNombres()+ " "+ MainApp.getCurrentUser().getApellidos());
         this.CurrentUserRole.setText(MainApp.getCurrentUser().getRol());
         initCombox();
         fillTable();

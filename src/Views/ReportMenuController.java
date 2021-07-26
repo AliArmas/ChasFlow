@@ -64,7 +64,7 @@ public class ReportMenuController implements Initializable {
         initCombox();
         this.comboMes.setValue("Noviembre");
         this.comboMes.setItems(meses);
-        this.CurrentUserName.setText(MainApp.getCurrentUser().getNombres());
+        this.CurrentUserName.setText(MainApp.getCurrentUser().getNombres()+ " "+ MainApp.getCurrentUser().getApellidos());
         this.CurrentUserRole.setText(MainApp.getCurrentUser().getRol());
     }
 
