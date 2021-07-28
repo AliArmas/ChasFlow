@@ -11,6 +11,8 @@ import Services.CashFlowServices;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
+
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -84,6 +86,11 @@ public class RegistroIndicadoresController implements Initializable {
     
     @FXML
     private Button Salir;
+    
+    @FXML
+    private ComboBox<String> comboMes;
+    
+    ObservableList<String> meses = FXCollections.observableArrayList();
 
     CashFlowServices svc = new CashFlowServices();
     LocalDate month;
@@ -95,16 +102,19 @@ public class RegistroIndicadoresController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+    	initMES();
     	this.CurrentUserName.setText(MainApp.getCurrentUser().getNombres()+ " "+ MainApp.getCurrentUser().getApellidos());
     	this.CurrentUserRole.setText(MainApp.getCurrentUser().getRol());
         initCombox();
+        this.comboMes.setValue("Noviembre");
+        this.comboMes.setItems(meses);
     }
 
     @FXML
     private void onAddCobro(ActionEvent event) {
 
         int noSemana = this.cobroCombo.getValue();
-        String mes = getMes();
+        String mes = comboMes.getValue();
         String razon = this.cobroRazonInput.getText();
         String monto = this.montoCobroInput.getText();
         String tipo = "Cobro";
@@ -118,15 +128,20 @@ public class RegistroIndicadoresController implements Initializable {
         }
 
     }
-
-    public String getMes() {
-        Month mes = LocalDate.now().getMonth();
-        String nombre = mes.getDisplayName(TextStyle.FULL, new Locale("es", "ES"));
-        String primeraLetra = nombre.substring(0, 1);
-        String mayuscula = primeraLetra.toUpperCase();
-        String demasLetras = nombre.substring(1, nombre.length());
-        nombre = mayuscula + demasLetras;
-        return nombre;
+    
+    public void initMES(){
+        this.meses.add("Noviembre");
+        this.meses.add("Diciembre");
+        this.meses.add("Enero");
+        this.meses.add("Febrero");
+        this.meses.add("Marzo");
+        this.meses.add("Abril");
+        this.meses.add("Mayo");
+        this.meses.add("Junio");
+        this.meses.add("Julio");
+        this.meses.add("Agosto");
+        this.meses.add("Septiembre");
+        this.meses.add("Octubre");
     }
 
     @FXML
@@ -142,7 +157,7 @@ public class RegistroIndicadoresController implements Initializable {
     @FXML
     private void onAddPago(ActionEvent event) {
         int noSemana = this.pagoCombo.getValue();
-        String mes = getMes();
+        String mes = comboMes.getValue();
         String razon = this.pagoRazonInput.getText();
         String monto = this.montoPagoInput.getText();
         String tipo = "Pago";
@@ -159,7 +174,7 @@ public class RegistroIndicadoresController implements Initializable {
     @FXML
     private void onAddBanco(ActionEvent event) {
         int noSemana = this.bancosCombo.getValue();
-        String mes = getMes();
+        String mes = comboMes.getValue();
         String razon = this.pagoBancoInput.getText();
         String monto = this.montoBancoInput.getText();
         String tipo = "Banco";
@@ -193,7 +208,7 @@ public class RegistroIndicadoresController implements Initializable {
     }
 
     public boolean validateRegister(String razon, String monto) {
-        return !(razon.equals("") || razon.equals(" ") || monto.equals(" ") || monto.equals("") || monto.equals("0") || monto.contains("a"));
+        return !(razon.equals("") || razon.equals(" ") || monto.equals(" ") || monto.equals("") || monto.contains("a"));
     }
 
     public void validateSuperUser() {

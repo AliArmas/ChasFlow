@@ -131,5 +131,6 @@
             <Font name="Segoe UI Bold" size="24.0" />
          </font>
       </Button>
+      <ComboBox fx:id="comboMes" layoutX="541.0" layoutY="166.0" prefHeight="29.0" prefWidth="250.0" promptText="MES A INGRESAR" style="-fx-background-radius: 10;" />
    </children>
 </AnchorPane>
